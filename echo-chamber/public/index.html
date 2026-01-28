@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏰 Echo Chamber - Magical Sequence Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="castle-bg"></div>
+    
+    <div class="container">
+        <header class="header">
+            <h1>🏰 The Echo Chamber</h1>
+            <p class="subtitle">A Magical Sequence Prediction Puzzle</p>
+        </header>
+
+        <div class="story-section">
+            <div class="story-card">
+                <h2>⚡ The Legend</h2>
+                <p>Perched atop the highest hill stands the majestic Echo Castle. Within its stone walls lies the Echo Room, a chamber with the mystic power to echo numbers in sequence.</p>
+                <p>Legends tell of a wizard who enchanted this chamber to test the intellect of visitors. Only those who can predict the next echo are deemed worthy of the castle's hidden treasures.</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Input Section -->
+            <div class="card input-section">
+                <h2>🔮 Enter Your Sequence</h2>
+                <p class="help-text">Enter numbers separated by commas (e.g., 3, 6, 9, 12)</p>
+                
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="sequenceInput" 
+                        placeholder="Enter sequence..." 
+                        class="sequence-input"
+                    >
+                    <button id="analyzeBtn" class="btn btn-primary">
+                        ✨ Analyze Sequence
+                    </button>
+                </div>
+
+                <div class="quick-examples">
+                    <p>Quick Examples:</p>
+                    <button class="btn-example" data-sequence="3,6,9,12">Arithmetic (3,6,9,12)</button>
+                    <button class="btn-example" data-sequence="2,4,8,16">Geometric (2,4,8,16)</button>
+                    <button class="btn-example" data-sequence="1,4,9,16,25">Polynomial (1,4,9,16,25)</button>
+                    <button class="btn-example" data-sequence="5,5,5,5">Constant (5,5,5,5)</button>
+                </div>
+
+                <div class="advanced-options">
+                    <label>
+                        <input type="checkbox" id="predictMultiple">
+                        Predict next <input type="number" id="predictCount" value="5" min="1" max="20" style="width: 50px;"> terms
+                    </label>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="card results-section" id="resultsSection" style="display: none;">
+                <h2>🎯 Analysis Results</h2>
+                
+                <div id="resultContent">
+                    <!-- Results will be dynamically inserted here -->
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="sequenceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="card stats-section">
+                <h2>📊 Chamber Statistics</h2>
+                <div id="statsContent">
+                    <p class="loading">No sequences analyzed yet...</p>
+                </div>
+            </div>
+
+            <!-- Memory Section -->
+            <div class="card memory-section">
+                <h2>📜 Recent Echoes</h2>
+                <div class="memory-controls">
+                    <button id="refreshMemories" class="btn btn-secondary">🔄 Refresh</button>
+                    <button id="clearMemories" class="btn btn-danger">🗑️ Clear All</button>
+                    <button id="exportMemories" class="btn btn-secondary">💾 Export</button>
+                </div>
+                <div id="memoriesContent">
+                    <p class="loading">No memories recorded yet...</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>✨ May the wisdom of the echoes guide your path... ✨</p>
+            <p class="footer-links">
+                <a href="docs.html">📚 Documentation</a> | 
+                <a href="https://github.com/microsoft/CopilotAdventures">💻 GitHub</a> | 
+                <a href="#" id="aboutLink">ℹ️ About</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Modal for About -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>About Echo Chamber</h2>
+            <p><strong>Version:</strong> 2.0.0</p>
+            <p><strong>Part of:</strong> CopilotAdventures</p>
+            <h3>Supported Patterns:</h3>
+            <ul>
+                <li><strong>Arithmetic Progressions:</strong> Constant difference (e.g., 2, 4, 6, 8)</li>
+                <li><strong>Geometric Progressions:</strong> Constant ratio (e.g., 2, 6, 18, 54)</li>
+                <li><strong>Polynomial Sequences:</strong> Quadratic, cubic, etc. (e.g., 1, 4, 9, 16, 25)</li>
+            </ul>
+            <h3>Features:</h3>
+            <ul>
+                <li>Multi-pattern detection and prediction</li>
+                <li>Visual sequence representation</li>
+                <li>Historical analysis and statistics</li>
+                <li>Memory export and tracking</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "echo-chamber",
+  "version": "2.0.0",
+  "description": "A magical number sequence prediction puzzle with multi-pattern support and web interface",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node src/tests/test-runner.js",
+    "test:unit": "node src/tests/unit-tests.js",
+    "test:integration": "node src/tests/integration-tests.js",
+    "cli": "node src/cli.js",
+    "docs": "node src/docs-generator.js"
+  },
+  "keywords": [
+    "echo",
+    "chamber",
+    "sequence",
+    "prediction",
+    "arithmetic",
+    "geometric",
+    "polynomial",
+    "progression"
+  ],
+  "author": "CopilotAdventures",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

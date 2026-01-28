@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Echo Chamber Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .docs-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .docs-content {
+            background: rgba(45, 36, 56, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+            line-height: 1.8;
+        }
+        
+        .docs-content h1 {
+            color: var(--accent-color);
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .docs-content h2 {
+            color: var(--secondary-color);
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        
+        .docs-content h3 {
+            color: var(--text-light);
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .docs-content code {
+            background: rgba(26, 22, 37, 0.8);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-color);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .docs-content pre {
+            background: rgba(26, 22, 37, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+        }
+        
+        .docs-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .docs-content ul, .docs-content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .docs-content li {
+            margin-bottom: 10px;
+        }
+        
+        .docs-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .docs-content th, .docs-content td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+        
+        .docs-content th {
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        .formula-box {
+            background: rgba(139, 92, 246, 0.1);
+            padding: 20px;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Georgia', serif;
+            font-size: 1.1em;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: rgba(139, 92, 246, 0.2);
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(139, 92, 246, 0.3);
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="castle-bg"></div>
+    
+    <div class="docs-container">
+        <a href="index.html" class="back-link">← Back to Echo Chamber</a>
+        
+        <div class="docs-content">
+            <h1>📚 Echo Chamber Documentation</h1>
+            
+            <h2>🎯 Quick Start</h2>
+            <p>The Echo Chamber is a magical application that predicts the next number in mathematical sequences. It supports three types of patterns:</p>
+            <ul>
+                <li><strong>Arithmetic Progressions</strong> - constant differences</li>
+                <li><strong>Geometric Progressions</strong> - constant ratios</li>
+                <li><strong>Polynomial Sequences</strong> - quadratic, cubic, and higher degrees</li>
+            </ul>
+            
+            <h2>🔮 Pattern Types Explained</h2>
+            
+            <h3>1. Arithmetic Progressions</h3>
+            <p>A sequence where each term differs from the previous by a constant amount (the "common difference").</p>
+            
+            <div class="formula-box">
+                <strong>Formula:</strong> a(n) = a₁ + d(n - 1)<br>
+                Where: a₁ = first term, d = common difference, n = term position
+            </div>
+            
+            <p><strong>Example:</strong></p>
+            <pre><code>Sequence: 3, 6, 9, 12
+Difference: 6 - 3 = 3 (constant)
+Next term: 12 + 3 = 15</code></pre>
+            
+            <p><strong>Real-world applications:</strong></p>
+            <ul>
+                <li>Monthly savings with fixed deposits</li>
+                <li>Distance traveled at constant speed</li>
+                <li>Linear depreciation of assets</li>
+            </ul>
+            
+            <h3>2. Geometric Progressions</h3>
+            <p>A sequence where each term is obtained by multiplying the previous term by a constant (the "common ratio").</p>
+            
+            <div class="formula-box">
+                <strong>Formula:</strong> a(n) = a₁ × r^(n - 1)<br>
+                Where: a₁ = first term, r = common ratio, n = term position
+            </div>
+            
+            <p><strong>Example:</strong></p>
+            <pre><code>Sequence: 2, 6, 18, 54
+Ratio: 6 / 2 = 3 (constant)
+Next term: 54 × 3 = 162</code></pre>
+            
+            <p><strong>Real-world applications:</strong></p>
+            <ul>
+                <li>Population growth</li>
+                <li>Compound interest</li>
+                <li>Viral content spread</li>
+                <li>Radioactive decay</li>
+            </ul>
+            
+            <h3>3. Polynomial Sequences</h3>
+            <p>Sequences that follow polynomial patterns. The most common is quadratic (degree 2), like perfect squares.</p>
+            
+            <div class="formula-box">
+                <strong>Detection Method:</strong> Finite Differences<br>
+                Calculate successive differences until they become constant. The level at which this occurs determines the polynomial degree.
+            </div>
+            
+            <p><strong>Example (Perfect Squares):</strong></p>
+            <pre><code>Sequence:    1   4   9  16  25
+1st diff:      3   5   7   9
+2nd diff:        2   2   2  (constant → degree 2)
+Next term: 25 + (9 + 2) = 36</code></pre>
+            
+            <p><strong>Real-world applications:</strong></p>
+            <ul>
+                <li>Area calculations (square/cubic growth)</li>
+                <li>Acceleration in physics</li>
+                <li>Algorithm complexity analysis</li>
+            </ul>
+            
+            <h2>🎨 Using the Web Interface</h2>
+            
+            <h3>Basic Usage</h3>
+            <ol>
+                <li>Enter your sequence in the input field (comma-separated numbers)</li>
+                <li>Click "Analyze Sequence" or press Enter</li>
+                <li>View the results including pattern type, formula, and prediction</li>
+                <li>Check the visualization chart to see the sequence graphically</li>
+            </ol>
+            
+            <h3>Quick Examples</h3>
+            <p>Try these pre-loaded examples to see different pattern types:</p>
+            <ul>
+                <li><strong>Arithmetic:</strong> 3, 6, 9, 12 → 15</li>
+                <li><strong>Geometric:</strong> 2, 4, 8, 16 → 32</li>
+                <li><strong>Polynomial:</strong> 1, 4, 9, 16, 25 → 36</li>
+                <li><strong>Constant:</strong> 5, 5, 5, 5 → 5</li>
+            </ul>
+            
+            <h3>Advanced Features</h3>
+            <p><strong>Multiple Predictions:</strong></p>
+            <ul>
+                <li>Check the "Predict next N terms" option</li>
+                <li>Set the number of predictions you want (1-20)</li>
+                <li>Get a complete extended sequence</li>
+            </ul>
+            
+            <h2>📊 Statistics & Analysis</h2>
+            
+            <p>The Echo Chamber tracks all your sequence analyses and provides insights:</p>
+            
+            <ul>
+                <li><strong>Total Processed:</strong> Number of sequences analyzed</li>
+                <li><strong>Success Rate:</strong> Percentage of successfully detected patterns</li>
+                <li><strong>Average Confidence:</strong> Overall confidence in predictions</li>
+                <li><strong>Type Distribution:</strong> Breakdown by pattern type</li>
+                <li><strong>Trends:</strong> Recent patterns in your analyses</li>
+            </ul>
+            
+            <h2>🔧 API Reference</h2>
+            
+            <h3>Analyze Sequence</h3>
+            <p><strong>Endpoint:</strong> <code>POST /api/analyze</code></p>
+            <pre><code>{
+  "sequence": [3, 6, 9, 12]
+}</code></pre>
+            
+            <h3>Predict Multiple Terms</h3>
+            <p><strong>Endpoint:</strong> <code>POST /api/predict-multiple</code></p>
+            <pre><code>{
+  "sequence": [2, 4, 8],
+  "count": 5
+}</code></pre>
+            
+            <h3>Get Statistics</h3>
+            <p><strong>Endpoint:</strong> <code>GET /api/stats</code></p>
+            
+            <h3>Get Memories</h3>
+            <p><strong>Endpoint:</strong> <code>GET /api/memories</code></p>
+            
+            <h2>💡 Tips & Tricks</h2>
+            
+            <h3>For Best Results:</h3>
+            <ul>
+                <li>Provide at least 4 terms in your sequence</li>
+                <li>Ensure your sequence actually follows a pattern</li>
+                <li>Use decimal numbers for fractional progressions</li>
+                <li>Check the confidence score in results</li>
+            </ul>
+            
+            <h3>Common Mistakes:</h3>
+            <ul>
+                <li>Entering sequences with no pattern</li>
+                <li>Using too few terms (need at least 2)</li>
+                <li>Mixing different pattern types in one sequence</li>
+                <li>Typos in number entry</li>
+            </ul>
+            
+            <h2>🧮 Mathematical Background</h2>
+            
+            <h3>Why These Patterns Matter</h3>
+            <p>These three types of sequences appear throughout mathematics, science, and everyday life:</p>
+            
+            <table>
+                <tr>
+                    <th>Pattern Type</th>
+                    <th>Real-World Example</th>
+                    <th>Formula Type</th>
+                </tr>
+                <tr>
+                    <td>Arithmetic</td>
+                    <td>Monthly savings</td>
+                    <td>Linear</td>
+                </tr>
+                <tr>
+                    <td>Geometric</td>
+                    <td>Population growth</td>
+                    <td>Exponential</td>
+                </tr>
+                <tr>
+                    <td>Polynomial</td>
+                    <td>Falling objects</td>
+                    <td>Quadratic+</td>
+                </tr>
+            </table>
+            
+            <h3>Detection Algorithm</h3>
+            <p>The Echo Chamber uses a waterfall approach:</p>
+            <ol>
+                <li><strong>Try Arithmetic</strong> - Fastest, check for constant differences</li>
+                <li><strong>Try Geometric</strong> - Check for constant ratios</li>
+                <li><strong>Try Polynomial</strong> - Use finite differences method</li>
+                <li><strong>Unknown</strong> - If none match, report as undetectable</li>
+            </ol>
+            
+            <h2>🎓 Learning Resources</h2>
+            
+            <h3>Further Reading:</h3>
+            <ul>
+                <li><strong>Sequences and Series</strong> - Khan Academy</li>
+                <li><strong>Number Theory</strong> - MIT OpenCourseWare</li>
+                <li><strong>Finite Differences</strong> - Wolfram MathWorld</li>
+            </ul>
+            
+            <h3>Practice Sequences:</h3>
+            <p>Try predicting these sequences by hand, then verify with Echo Chamber:</p>
+            
+            <pre><code>1. 5, 10, 15, 20, ? 
+2. 1, 2, 4, 8, ?
+3. 0, 1, 4, 9, ?
+4. 2, 5, 11, 23, ?
+5. 10, 8, 6, 4, ?
+
+(Answers: 25, 16, 16, 47, 2)</code></pre>
+            
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <h3>Q: How many terms do I need to enter?</h3>
+            <p><strong>A:</strong> Minimum 2, but 4+ is recommended for accurate pattern detection.</p>
+            
+            <h3>Q: What if my sequence doesn't match any pattern?</h3>
+            <p><strong>A:</strong> The Echo Chamber will report "unknown" - your sequence might be irregular or require more advanced analysis.</p>
+            
+            <h3>Q: Can I use negative numbers?</h3>
+            <p><strong>A:</strong> Yes! All pattern types support negative numbers and decimals.</p>
+            
+            <h3>Q: How accurate are the predictions?</h3>
+            <p><strong>A:</strong> For valid patterns, predictions are 100% accurate within floating-point precision limits.</p>
+            
+            <h3>Q: Can I export my history?</h3>
+            <p><strong>A:</strong> Yes, use the "Export" button in the memories section to download a JSON file.</p>
+            
+            <h2>🏰 About</h2>
+            
+            <p>The Echo Chamber is part of the <strong>CopilotAdventures</strong> educational project, designed to teach programming concepts through fantasy-themed challenges.</p>
+            
+            <p><strong>Version:</strong> 2.0.0<br>
+            <strong>Created with:</strong> Node.js, Chart.js, and lots of magic ✨</p>
+            
+            <div style="text-align: center; margin-top: 40px; padding-top: 40px; border-top: 2px solid var(--border-color);">
+                <p style="font-size: 1.2em; color: var(--accent-color);">
+                    ✨ May the wisdom of the echoes guide your path... ✨
+                </p>
+                <p style="margin-top: 20px;">
+                    <a href="index.html" class="back-link">← Return to Echo Chamber</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
